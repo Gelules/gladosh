@@ -5,6 +5,7 @@ then
     run_command_file="$1"
 else
     echo "Usage: $0 RUN_COMMAND_FILE" 2>&1
+    exit 1
 fi
 
 gladosh_dir=$HOME/.local/gladosh
