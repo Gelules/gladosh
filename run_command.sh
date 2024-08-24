@@ -38,12 +38,12 @@ gladosh()
 
     if [ "$1" = "on" ]
     then
-        exec 2>$gladosh_log
+        exec 4>&2 2>$gladosh_log
         trap gladosh_ia ERR
         [ ! -d "$gladosh_dir" ] && mkdir -p $gladosh_dir/models
     elif [ "$1" = "off" ]
     then
-        exec 2>/dev/pts/2
+        exec 2>&4 4>&-
         trap - ERR
     else
         echo "Usage: gladosh on/off" >&2
