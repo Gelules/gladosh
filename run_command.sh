@@ -16,7 +16,7 @@ gladosh_ia ()
     then
         answer=""
     else
-        answer=$(curl http://localhost:11434/api/generate -d "{ \"model\": \"glados\", \"prompt\": \"$prompt_to_ia\", \"stream\": false }" 2>/dev/null | jq -r '.response')
+        answer=$(curl http://localhost:11434/api/generate -d "{ \"model\": \"gladosh\", \"prompt\": \"$prompt_to_ia\", \"stream\": false }" 2>/dev/null | jq -r '.response')
         answer=$(echo -n $answer | sed 's/\*//g' | sed 's/\// slash /g')
 
     fi

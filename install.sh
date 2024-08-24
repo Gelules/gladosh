@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $# -ne 1 ]
+if [ $# -eq 1 ]
 then
     run_command_file="$1"
 else
@@ -20,10 +20,11 @@ cp models/Modelfile $models_dir
 curl -fsSL https://ollama.com/install.sh | sh
 
 ollama pull gemma2:2b
-ollama create gladosh -f $models_dir/Modelfile
 
 echo "GLaDOsh: INPUT '/bye' INTO THE NEXT PROMPT!"
 ollama run gemma2:2b
+
+ollama create gladosh -f $models_dir/Modelfile
 
 cat run_command.sh >> $1
 
