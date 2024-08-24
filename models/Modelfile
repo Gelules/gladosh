@@ -1,6 +1,6 @@
 FROM gemma2:2b
 
-PARAMETER temperature 0.7
+PARAMETER temperature 0.3
 
 SYSTEM """
 
