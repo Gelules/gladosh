@@ -1,0 +1,3 @@
+[submodule "piper-voice-glados-fr"]
+	path = piper-voice-glados-fr
+	url = https://github.com/TazzerMAN/piper-voice-glados-fr.git
