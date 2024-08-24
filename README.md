@@ -16,20 +16,22 @@ with any other voice and change the Modelfile to change the behavior of the IA.
 
 Before installing, you may want to check the **run_command.sh** file.
 
-1. Clone this repo
+1. Clone this repo with submodule recursion
 2. Install the packages in packages.txt with your package manager
 3. install piper-tts with the requirements.txt file using pip
 4. Execute **install.sh** giving the path to your run command file (bashrc, zshrc, ...)
 
 ## Usage
 
-In your shell, to activate GLaDOsh
+In your shell, to activate GLaDOsh:
 
 ```text
 gladosh on
 ```
 
-To deactivate GLaDOsh
+From now on, everytime you will fail a command, GLaDOS will correct you.
+
+To deactivate GLaDOsh:
 
 ```text
 gladosh off
@@ -46,3 +48,8 @@ within this file.
 
 I use [Ollama](https://ollama.com) as large language models with the model
 [Gemma2:2b](https://ollama.com/library/gemma2:2b)
+
+There's still bugs for now. The most problematic one being stderr not printable
+for regular execution without fail.
+
+Also, it may be a bit slow to generate a voice. It depends on your computer.
